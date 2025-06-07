@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Rumus Fisika SMA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Kalkulator Rumus Fisika</h1>
+        <p>Pilih rumus, masukkan nilai yang diketahui, dan temukan hasilnya!</p>
+    </header>
+
+    <main class="calculator-container">
+        <div class="calculator-card" id="ohm-card">
+            <h2>Hukum Ohm</h2>
+            <p class="formula">V = I × R</p>
+            <div class="variable-description">
+                <span><b>V</b> = Tegangan (Volt)</span>
+                <span><b>I</b> = Arus (Ampere)</span>
+                <span><b>R</b> = Hambatan (Ohm)</span>
+            </div>
+            <form id="ohm-form">
+                <div class="form-group">
+                    <label for="ohm-calculate">Hitung Apa?</label>
+                    <select id="ohm-calculate">
+                        <option value="tegangan">Tegangan (V)</option>
+                        <option value="arus">Arus (I)</option>
+                        <option value="hambatan">Hambatan (R)</option>
+                    </select>
+                </div>
+                <div class="form-group input-group" id="ohm-input-tegangan">
+                    <label for="ohm-tegangan">Tegangan (V)</label>
+                    <input type="number" id="ohm-tegangan" placeholder="Masukkan nilai tegangan" step="any">
+                </div>
+                <div class="form-group input-group" id="ohm-input-arus">
+                    <label for="ohm-arus">Arus (I)</label>
+                    <input type="number" id="ohm-arus" placeholder="Masukkan nilai arus" step="any">
+                </div>
+                <div class="form-group input-group" id="ohm-input-hambatan">
+                    <label for="ohm-hambatan">Hambatan (R)</label>
+                    <input type="number" id="ohm-hambatan" placeholder="Masukkan nilai hambatan" step="any">
+                </div>
+                <button type="submit">HITUNG</button>
+            </form>
+            <div class="result" id="ohm-result">Hasil akan muncul di sini...</div>
+        </div>
+
+        <div class="calculator-card" id="newton-card">
+            <h2>Hukum II Newton</h2>
+            <p class="formula">F = m × a</p>
+            <div class="variable-description">
+                <span><b>F</b> = Gaya (Newton)</span>
+                <span><b>m</b> = Massa (kg)</span>
+                <span><b>a</b> = Percepatan (m/s²)</span>
+            </div>
+            <form id="newton-form">
+                <div class="form-group">
+                    <label for="newton-calculate">Hitung Apa?</label>
+                    <select id="newton-calculate">
+                        <option value="gaya">Gaya (F)</option>
+                        <option value="massa">Massa (m)</option>
+                        <option value="percepatan">Percepatan (a)</option>
+                    </select>
+                </div>
+                <div class="form-group input-group" id="newton-input-gaya">
+                    <label for="newton-gaya">Gaya (F)</label>
+                    <input type="number" id="newton-gaya" placeholder="Masukkan nilai gaya" step="any">
+                </div>
+                <div class="form-group input-group" id="newton-input-massa">
+                    <label for="newton-massa">Massa (m)</label>
+                    <input type="number" id="newton-massa" placeholder="Masukkan nilai massa" step="any">
+                </div>
+                <div class="form-group input-group" id="newton-input-percepatan">
+                    <label for="newton-percepatan">Percepatan (a)</label>
+                    <input type="number" id="newton-percepatan" placeholder="Masukkan nilai percepatan" step="any">
+                </div>
+                <button type="submit">HITUNG</button>
+            </form>
+            <div class="result" id="newton-result">Hasil akan muncul di sini...</div>
+        </div>
+
+        <div class="calculator-card" id="kinetic-card">
+            <h2>Energi Kinetik</h2>
+            <p class="formula">Ek = ½ × m × v²</p>
+            <div class="variable-description">
+                <span><b>Ek</b> = Energi Kinetik (Joule)</span>
+                <span><b>m</b> = Massa (kg)</span>
+                <span><b>v</b> = Kecepatan (m/s)</span>
+            </div>
+            <form id="kinetic-form">
+                <div class="form-group">
+                    <label for="kinetic-calculate">Hitung Apa?</label>
+                    <select id="kinetic-calculate">
+                        <option value="energi">Energi Kinetik (Ek)</option>
+                        <option value="massa">Massa (m)</option>
+                        <option value="kecepatan">Kecepatan (v)</option>
+                    </select>
+                </div>
+                <div class="form-group input-group" id="kinetic-input-energi">
+                    <label for="kinetic-energi">Energi Kinetik (Ek)</label>
+                    <input type="number" id="kinetic-energi" placeholder="Masukkan nilai energi" step="any">
+                </div>
+                <div class="form-group input-group" id="kinetic-input-massa">
+                    <label for="kinetic-massa">Massa (m)</label>
+                    <input type="number" id="kinetic-massa" placeholder="Masukkan nilai massa" step="any">
+                </div>
+                <div class="form-group input-group" id="kinetic-input-kecepatan">
+                    <label for="kinetic-kecepatan">Kecepatan (v)</label>
+                    <input type="number" id="kinetic-kecepatan" placeholder="Masukkan nilai kecepatan" step="any">
+                </div>
+                <button type="submit">HITUNG</button>
+            </form>
+            <div class="result" id="kinetic-result">Hasil akan muncul di sini...</div>
+        </div>
+        
+        <div class="calculator-card" id="potential-card">
+            <h2>Energi Potensial</h2>
+            <p class="formula">Ep = m × g × h</p>
+            <div class="variable-description">
+                <span><b>Ep</b> = Energi Potensial (Joule)</span>
+                <span><b>m</b> = Massa (kg)</span>
+                <span><b>h</b> = Ketinggian (m)</span>
+            </div>
+            <form id="potential-form">
+                <div class="form-group">
+                    <label for="potential-calculate">Hitung Apa?</label>
+                    <select id="potential-calculate">
+                        <option value="energi">Energi Potensial (Ep)</option>
+                        <option value="massa">Massa (m)</option>
+                        <option value="ketinggian">Ketinggian (h)</option>
+                    </select>
+                </div>
+                <div class="form-group input-group" id="potential-input-energi">
+                    <label for="potential-energi">Energi Potensial (Ep)</label>
+                    <input type="number" id="potential-energi" placeholder="Masukkan nilai energi" step="any">
+                </div>
+                <div class="form-group input-group" id="potential-input-massa">
+                    <label for="potential-massa">Massa (m)</label>
+                    <input type="number" id="potential-massa" placeholder="Masukkan nilai massa" step="any">
+                </div>
+                <div class="form-group input-group" id="potential-input-ketinggian">
+                    <label for="potential-ketinggian">Ketinggian (h)</label>
+                    <input type="number" id="potential-ketinggian" placeholder="Masukkan nilai ketinggian" step="any">
+                </div>
+                <button type="submit">HITUNG</button>
+            </form>
+            <div class="result" id="potential-result">Hasil akan muncul di sini...</div>
+        </div>
+        
+        <div class="calculator-card" id="power-card">
+            <h2>Daya</h2>
+            <p class="formula">P = W / t</p>
+            <div class="variable-description">
+                <span><b>P</b> = Daya (Watt)</span>
+                <span><b>W</b> = Usaha/Energi (Joule)</span>
+                <span><b>t</b> = Waktu (detik)</span>
+            </div>
+            <form id="power-form">
+                <div class="form-group">
+                    <label for="power-calculate">Hitung Apa?</label>
+                    <select id="power-calculate">
+                        <option value="daya">Daya (P)</option>
+                        <option value="usaha">Usaha/Energi (W)</option>
+                        <option value="waktu">Waktu (t)</option>
+                    </select>
+                </div>
+                <div class="form-group input-group" id="power-input-daya">
+                    <label for="power-daya">Daya (P)</label>
+                    <input type="number" id="power-daya" placeholder="Masukkan nilai daya" step="any">
+                </div>
+                <div class="form-group input-group" id="power-input-usaha">
+                    <label for="power-usaha">Usaha/Energi (W)</label>
+                    <input type="number" id="power-usaha" placeholder="Masukkan nilai usaha" step="any">
+                </div>
+                <div class="form-group input-group" id="power-input-waktu">
+                    <label for="power-waktu">Waktu (t)</label>
+                    <input type="number" id="power-waktu" placeholder="Masukkan nilai waktu" step="any">
+                </div>
+                <button type="submit">HITUNG</button>
+            </form>
+            <div class="result" id="power-result">Hasil akan muncul di sini...</div>
+        </div>
+        </main>
+    
+    <footer>
+        <p>Dibuat untuk memudahkan siswa SMA. Selamat belajar!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
